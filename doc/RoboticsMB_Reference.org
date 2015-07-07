@@ -1,0 +1,160 @@
+#+TITLE: Robotics Merit Badge Class Reference
+#+AUTHOR: Maurice Ling
+#+DATE: 2015-07-07
+
+* Introduction
+  This document contains useful information for the 
+  Troop 675 Irvine Robotics Merit Badge class.
+
+  Copyright © 2015 Maurice Ling
+
+* Items to bring for each Session
+   - Laptop/computer with Android IDE installed. (see Section: [[Computer Requirements]])
+   - Laptop power adapter/cable.
+   - Pen/pencil for taking notes
+   - USB -A to mini-B USB cable.  These are commonly used to connect
+     cameras or other devices to computers.  You should be able to
+     find these lying around in a drawer somewhere.  There are
+     different types of mini-B cables.  The kind you need looks like:
+#+CAPTION: USB-A to Mini-B Cable
+   [[http://bsatroop675.org/wordpress/wp-content/uploads/2014/05/USB-AToMini-BCable.jpg]].
+
+* Computer Requirements
+
+  You need a computer (Mac, Windows PC, or Linux) that can run the
+  Arduino IDE (Interactive Development Environment).  The computer must
+  have an available USB port.  Sorry, no tablets or smart phones.
+  
+  If you have extra time and an Android phone/tablet, it is possible to
+  [[http://www.instructables.com/id/Program-your-Arduino-with-a-Android-device][program your Arduino with an Android tablet]].  Not recommended for your
+  primary development environment though!  Software Installation
+  
+  These steps may require Administrator privileges and software
+  installation skills.  Get an adult to assist you if you are unsure of
+  what to do.  If you are stuck, make sure you at least download the
+  packages on to your computer for the first class.  
+  
+** Arduino IDE
+
+   Download and install the [[http://www.arduino.cc/en/Main/Software][Arduino IDE]]. For this class, I will be using
+   version 1.0.6 of the IDE.  There are newer Beta versions available
+   (1.5 and 1.6) which you are welcome to try (at your own risk!).
+
+   Note:  Linux users can install the Arduino IDE via their package manager.
+
+*** Arduino Board Configuration
+    Configure your Arduino IDE to work with our board under the *Tools* Menu:
+       - Arduino Pro or Pro Mini
+       - ATmega 328 3.3V, 8Mhz
+
+*** Serial Port Configuration
+    Select the Serial port to use for connecting the Arduino Board.  On Windows
+    this is usually the COM3 port.  On the Mac, it is a port that does not start 
+    with "Bluetooth".
+
+** USB Driver
+
+   To allow your computer to communicate to the Arduino board, install
+   the USB Driver for your computer. [[http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx][Download the driver package]] for your
+   computer and install it on your computer following the instructions
+   for your particular type of computer.
+   
+*** Mac OSX
+
+    Click on the zip file which you [[http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx][downloaded]] and install the dmg file
+    ([[https://www.google.com/search?q%3Dhow%2Bto%2Binstall%2Bdmg%2Bon%2BMac&ie%3Dutf-8&oe%3Dutf-8][google instructions]]).  
+
+*** Windows PC
+
+    Extract the zip file which you [[http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx][downloaded]] and click on the right
+    installer (x86 or x64) for your computer.  To determine if your PC is
+    32-bit (x86) or 64-bit (x64), follow the [[https://support.microsoft.com/en-us/kb/827218][instructions provided by Microsoft]].
+
+** Github Account and Setup
+
+   Github is a source code control tool that will allow you to retrieve
+   my examples in class and for me to look at code that you’ve developed.
+   It will also help you during development by allowing you to check
+   point your code.
+   
+   *Note:* For “git” commands mentioned below, right click on the
+   RoboticsMB project in the github client and select “Open in Git shell”
+   (for Windows). This will launch a terminal in the RoboticsMB directory
+   where you can execute the “git” commands.
+
+   *Note:*  After you synchronize, you may need to restart the Arduino
+   IDE to be able to see any new files.
+   
+   1. Install the github client software on your computer
+   (see Section: [[Github Client Software Installation]].)
+   2. Run the github client and create an account.
+   3. Email your github user ID to me.
+   4. In your browser, go to https://github.com/mcli/RoboticsMB and click
+      “fork” on the upper right hand side.  Creating a fork copies the
+      RoboticsMB project into your own github account that you can work
+      with.
+   5. In the github client, clone your forked project into a directory
+      and make that the sketch location the Preferences sketchbook
+      location field in the Arduino IDE.
+   6. Configure my RoboticsMB to be the upstream project (from your
+      command line prompt, git shell, or terminal). In the RoboticsMB
+      project directory created when you cloned your project, type:
+      #+BEGIN_EXAMPLE
+      git remote add upstream https://github.com/mcli/RoboticsMB.git
+      #+END_EXAMPLE
+
+*** Github Client Software Installation
+**** Windows 7 and higher
+https://windows.github.com/
+
+**** Mac OSX
+
+https://mac.github.com/
+
+*** Synchronizing with the Upstream Github Project
+
+To synchronize with the upstream project if there are any changes,
+perform the following commands in the RoboticsMB project directory:
+
+1. Retrieve any upstream changes
+   #+BEGIN_EXAMPLE
+   git fetch upstream
+   #+END_EXAMPLE
+
+2. Make sure you're on your local master branch
+   #+BEGIN_EXAMPLE
+   git checkout master
+   #+END_EXAMPLE
+
+3. Merge your local master with the upstream changes
+   #+BEGIN_EXAMPLE
+   git merge upstream/master
+   #+END_EXAMPLE
+
+*Note:* After you synchronize, you may need to restart the Arduino IDE to be able to see any new program files.
+
+* Other Items You Will Need
+
+  Here are additional items you will need:
+
+    - Blue Card with the Scoutmaster’s signature.
+    - Small Phillips head screw driver (not flat head)
+    - AAA NiMH battery charger (the kit you will receive will have 4
+      AAA NiMH batteries).
+    - A small work area at home you can use to work on your robot.
+      NOT on the floor!
+    - Sony or universal IR remote (optional)
+    - Multimeter (optional)
+
+* Sharing Computers in Class
+
+  Scouts will get the most out during our classes if they have their own
+  computer to program their robots. If this is not possible, the scout
+  needs to be in agreement with another scout to share their computer
+  during class.  If you are planning to share a computer you will need
+  the do the following to get the most out of the class:
+
+  - Inform the Merit Badge instructor of your situation.
+  - Have a pre-arranged agreement with another scout to share their laptop during class
+  - Bring a USB stick to store your programs.
+

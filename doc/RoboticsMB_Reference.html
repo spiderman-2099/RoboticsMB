@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Robotics Merit Badge Class Reference</title>
+<!-- 2015-07-07 Tue 07:31 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Maurice Ling" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Robotics Merit Badge Class Reference</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a></li>
+<li><a href="#sec-2">2. Items to bring for each Session</a></li>
+<li><a href="#sec-3">3. Computer Requirements</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Arduino IDE</a>
+<ul>
+<li><a href="#sec-3-1-1">3.1.1. Arduino Board Configuration</a></li>
+<li><a href="#sec-3-1-2">3.1.2. Serial Port Configuration</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-2">3.2. USB Driver</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1. Mac OSX</a></li>
+<li><a href="#sec-3-2-2">3.2.2. Windows PC</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-3">3.3. Github Account and Setup</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1. Github Client Software Installation</a></li>
+<li><a href="#sec-3-3-2">3.3.2. Synchronizing with the Upstream Github Project</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Other Items You Will Need</a></li>
+<li><a href="#sec-5">5. Sharing Computers in Class</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This document contains useful information for the 
+Troop 675 Irvine Robotics Merit Badge class.
+</p>
+
+<p>
+Copyright © 2015 Maurice Ling
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Items to bring for each Session</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Laptop/computer with Android IDE installed. (see Section: <a href="#sec-3">3</a>)
+</li>
+<li>Laptop power adapter/cable.
+</li>
+<li>Pen/pencil for taking notes
+</li>
+<li>USB -A to mini-B USB cable.  These are commonly used to connect
+cameras or other devices to computers.  You should be able to
+find these lying around in a drawer somewhere.  There are
+different types of mini-B cables.  The kind you need looks like:
+</li>
+</ul>
+<p>
+<img src="http://bsatroop675.org/wordpress/wp-content/uploads/2014/05/USB-AToMini-BCable.jpg" alt="USB-AToMini-BCable.jpg" />.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Computer Requirements</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+You need a computer (Mac, Windows PC, or Linux) that can run the
+Arduino IDE (Interactive Development Environment).  The computer must
+have an available USB port.  Sorry, no tablets or smart phones.
+</p>
+
+<p>
+If you have extra time and an Android phone/tablet, it is possible to
+<a href="http://www.instructables.com/id/Program-your-Arduino-with-a-Android-device">program your Arduino with an Android tablet</a>.  Not recommended for your
+primary development environment though!  Software Installation
+</p>
+
+<p>
+These steps may require Administrator privileges and software
+installation skills.  Get an adult to assist you if you are unsure of
+what to do.  If you are stuck, make sure you at least download the
+packages on to your computer for the first class.  
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Arduino IDE</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Download and install the <a href="http://www.arduino.cc/en/Main/Software">Arduino IDE</a>. For this class, I will be using
+version 1.0.6 of the IDE.  There are newer Beta versions available
+(1.5 and 1.6) which you are welcome to try (at your own risk!).
+</p>
+
+<p>
+Note:  Linux users can install the Arduino IDE via their package manager.
+</p>
+</div>
+
+<div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1"><span class="section-number-4">3.1.1</span> Arduino Board Configuration</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Configure your Arduino IDE to work with our board under the <b>Tools</b> Menu:
+</p>
+<ul class="org-ul">
+<li>Arduino Pro or Pro Mini
+</li>
+<li>ATmega 328 3.3V, 8Mhz
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-1-2" class="outline-4">
+<h4 id="sec-3-1-2"><span class="section-number-4">3.1.2</span> Serial Port Configuration</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<p>
+Select the Serial port to use for connecting the Arduino Board.  On Windows
+this is usually the COM3 port.  On the Mac, it is a port that does not start 
+with "Bluetooth".
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> USB Driver</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+To allow your computer to communicate to the Arduino board, install
+the USB Driver for your computer. <a href="http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx">Download the driver package</a> for your
+computer and install it on your computer following the instructions
+for your particular type of computer.
+</p>
+</div>
+
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> Mac OSX</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<p>
+Click on the zip file which you <a href="http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx">downloaded</a> and install the dmg file
+(<a href="https://www.google.com/search?q=how+to+install+dmg+on+Mac&ie=utf-8&oe=utf-8">google instructions</a>).  
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> Windows PC</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<p>
+Extract the zip file which you <a href="http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx">downloaded</a> and click on the right
+installer (x86 or x64) for your computer.  To determine if your PC is
+32-bit (x86) or 64-bit (x64), follow the <a href="https://support.microsoft.com/en-us/kb/827218">instructions provided by Microsoft</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Github Account and Setup</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Github is a source code control tool that will allow you to retrieve
+my examples in class and for me to look at code that you’ve developed.
+It will also help you during development by allowing you to check
+point your code.
+</p>
+
+<p>
+<b>Note:</b> For “git” commands mentioned below, right click on the
+RoboticsMB project in the github client and select “Open in Git shell”
+(for Windows). This will launch a terminal in the RoboticsMB directory
+where you can execute the “git” commands.
+</p>
+
+<p>
+<b>Note:</b>  After you synchronize, you may need to restart the Arduino
+IDE to be able to see any new files.
+</p>
+
+<ol class="org-ol">
+<li>Install the github client software on your computer
+</li>
+</ol>
+<p>
+(see Section: <a href="#sec-3-3-1">3.3.1</a>.)
+</p>
+<ol class="org-ol">
+<li>Run the github client and create an account.
+</li>
+<li>Email your github user ID to me.
+</li>
+<li>In your browser, go to <a href="https://github.com/mcli/RoboticsMB">https://github.com/mcli/RoboticsMB</a> and click
+“fork” on the upper right hand side.  Creating a fork copies the
+RoboticsMB project into your own github account that you can work
+with.
+</li>
+<li>In the github client, clone your forked project into a directory
+and make that the sketch location the Preferences sketchbook
+location field in the Arduino IDE.
+</li>
+<li>Configure my RoboticsMB to be the upstream project (from your
+command line prompt, git shell, or terminal). In the RoboticsMB
+project directory created when you cloned your project, type:
+<pre class="example">
+git remote add upstream https://github.com/mcli/RoboticsMB.git
+</pre>
+</li>
+</ol>
+</div>
+
+<div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> Github Client Software Installation</h4>
+<div class="outline-text-4" id="text-3-3-1">
+</div><ol class="org-ol"><li><a id="sec-3-3-1-1" name="sec-3-3-1-1"></a>Windows 7 and higher<br  /><div class="outline-text-5" id="text-3-3-1-1">
+<p>
+<a href="https://windows.github.com/">https://windows.github.com/</a>
+</p>
+</div>
+</li>
+
+<li><a id="sec-3-3-1-2" name="sec-3-3-1-2"></a>Mac OSX<br  /><div class="outline-text-5" id="text-3-3-1-2">
+<p>
+<a href="https://mac.github.com/">https://mac.github.com/</a>
+</p>
+</div>
+</li></ol>
+</div>
+
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> Synchronizing with the Upstream Github Project</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+To synchronize with the upstream project if there are any changes,
+perform the following commands in the RoboticsMB project directory:
+</p>
+
+<ol class="org-ol">
+<li>Retrieve any upstream changes
+<pre class="example">
+git fetch upstream
+</pre>
+</li>
+
+<li>Make sure you're on your local master branch
+<pre class="example">
+git checkout master
+</pre>
+</li>
+
+<li>Merge your local master with the upstream changes
+<pre class="example">
+git merge upstream/master
+</pre>
+</li>
+</ol>
+
+<p>
+<b>Note:</b> After you synchronize, you may need to restart the Arduino IDE to be able to see any new program files.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Other Items You Will Need</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Here are additional items you will need:
+</p>
+
+<ul class="org-ul">
+<li>Blue Card with the Scoutmaster’s signature.
+</li>
+<li>Small Phillips head screw driver (not flat head)
+</li>
+<li>AAA NiMH battery charger (the kit you will receive will have 4
+AAA NiMH batteries).
+</li>
+<li>A small work area at home you can use to work on your robot.
+NOT on the floor!
+</li>
+<li>Sony or universal IR remote (optional)
+</li>
+<li>Multimeter (optional)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Sharing Computers in Class</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Scouts will get the most out during our classes if they have their own
+computer to program their robots. If this is not possible, the scout
+needs to be in agreement with another scout to share their computer
+during class.  If you are planning to share a computer you will need
+the do the following to get the most out of the class:
+</p>
+
+<ul class="org-ul">
+<li>Inform the Merit Badge instructor of your situation.
+</li>
+<li>Have a pre-arranged agreement with another scout to share their laptop during class
+</li>
+<li>Bring a USB stick to store your programs.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2015-07-07</p>
+<p class="author">Author: Maurice Ling</p>
+<p class="date">Created: 2015-07-07 Tue 07:31</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
