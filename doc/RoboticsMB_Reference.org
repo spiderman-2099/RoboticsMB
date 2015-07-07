@@ -45,7 +45,7 @@
 *** Arduino Board Configuration
     Configure your Arduino IDE to work with our board under the *Tools* Menu:
        - Arduino Pro or Pro Mini
-       - ATmega 328 3.3V, 8Mhz
+       - ATmega 328 (3.3V, 8Mhz)
 
 *** Serial Port Configuration
     Select the Serial port to use for connecting the Arduino Board.  On Windows
