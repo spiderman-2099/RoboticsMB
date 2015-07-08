@@ -16,7 +16,7 @@
      cameras or other devices to computers.  You should be able to
      find these lying around in a drawer somewhere.  There are
      different types of mini-B cables.  The kind you need looks like:
-#+CAPTION: USB-A to Mini-B Cable
+   #+CAPTION: USB-A to Mini-B Cable
    [[http://bsatroop675.org/wordpress/wp-content/uploads/2014/05/USB-AToMini-BCable.jpg]].
 
 * Computer Requirements
@@ -61,8 +61,7 @@
    
 *** Mac OSX
 
-    Click on the zip file which you [[http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx][downloaded]] and install the dmg file
-    ([[https://www.google.com/search?q%3Dhow%2Bto%2Binstall%2Bdmg%2Bon%2BMac&ie%3Dutf-8&oe%3Dutf-8][google instructions]]).  
+    Click on the zip file which you [[http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx][downloaded]] and install the dmg file ([[https://www.google.com/search?q%3Dhow%2Bto%2Binstall%2Bdmg%2Bon%2BMac&ie%3Dutf-8&oe%3Dutf-8][google instructions]]).  
 
 *** Windows PC
 
@@ -146,15 +145,4 @@ perform the following commands in the RoboticsMB project directory:
     - Sony or universal IR remote (optional)
     - Multimeter (optional)
 
-* Sharing Computers in Class
-
-  Scouts will get the most out during our classes if they have their own
-  computer to program their robots. If this is not possible, the scout
-  needs to be in agreement with another scout to share their computer
-  during class.  If you are planning to share a computer you will need
-  the do the following to get the most out of the class:
-
-  - Inform the Merit Badge instructor of your situation.
-  - Have a pre-arranged agreement with another scout to share their laptop during class
-  - Bring a USB stick to store your programs.
 

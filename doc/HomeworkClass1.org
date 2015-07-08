@@ -1,0 +1,38 @@
+#+TITLE: Class 1 Homework
+#+AUTHOR: Maurice Ling
+#+DATE: 2015-07-07
+
+* Class 1 Exercises
+** Blink variations
+  1. Upload the Blink Example to your board (Examples → 01.Basics)
+  2. Save the pin number (13) in an “int” variable and replace all
+     instances of “13” with the variable. e.g. int ledPin=13;
+  3. Modify the program to generate the SOS signal – 3 short, 3 long,
+     3 short, pause, then repeat.
+  4. Save the program as BlinkSOS and commit using github client
+  5. Revise the program to add 2 function, shortBlinks() and
+     longBlinks(), to generate the SOS signal to make the program
+     shorter and more readable.
+  6. Save the program again and commit using github client
+  7. Revise the program to use one function instead of two (combine
+     shortBlinks() and longBlinks() into one).
+  8. Save the program again.
+  9. Using github client:
+     1. Commit
+     2. Synchronize to github server.
+
+** Accelerometer Exercise
+   1. Load the MicroM example “impact”: Files →libraries → microM → impact 
+   2. Open the Serial Monitor: Tools → Serial Monitor (or click on
+      icon on top right)
+   3. Run program, then tap the board lightly from different
+      directions to see the delta values change
+   4. Save the program into your sketches
+   5. Modify the program to print the x, y, and z axis readings (not
+      the delta readings).  This will cause a lot of information to show to 
+      the screen.
+   6. Turn the board in different directions and observe the readings.
+* Put Together Robot
+* Calibrate Robot
+* Test IR Remote commands
+
