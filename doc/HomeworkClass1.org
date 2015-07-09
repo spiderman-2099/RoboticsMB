@@ -5,7 +5,7 @@
 * Notes on Doing Class Homework
   Class homework reinforces what we covered in class and prepare you
   for the next class.  If you have not setup GitHub, please follow the
-  instructions in the [[https://github.com/mcli/RoboticsMB/blob/master/doc/RoboticsMB_Reference.html][RoboticsMB Reference]] guide.
+  instructions in the [[http://htmlpreview.github.com?https://github.com/mcli/RoboticsMB/blob/master/doc/RoboticsMB_Reference.html][RoboticsMB Reference]] guide.
 
   After each step, remember to commit all your source code using
   GitHub after each exercise and synchronize to push your changes to
