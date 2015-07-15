@@ -75,3 +75,6 @@
      control.
   4. Commit your source code using GitHub and synchronize to push your changes to the server.
 
+* Robotics Merit Badge Workbook
+  - Fill out Section 1a and b
+  - Get your Blue Card signed
