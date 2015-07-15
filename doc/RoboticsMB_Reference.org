@@ -49,9 +49,13 @@
 
 *** Serial Port Configuration
     Select the Serial port to use for connecting the Arduino Board.  On Windows
-    this is usually the COM3 port.  On the Mac, it is a port that does not start 
-    with "Bluetooth".
+    this is usually the COM3 port.  
 
+    On the Mac, a properly installed driver will show /dev/cu.SLAB_USBtoUART in the 
+    *Tools->port* menu
+
+    If the port does not show up in the menu, follow the USB Driver installation 
+    section below for your computer.
 ** USB Driver
 
    To allow your computer to communicate to the Arduino board, install
@@ -62,6 +66,9 @@
 *** Mac OSX
 
     Click on the zip file which you [[http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx][downloaded]] and install the dmg file ([[https://www.google.com/search?q%3Dhow%2Bto%2Binstall%2Bdmg%2Bon%2BMac&ie%3Dutf-8&oe%3Dutf-8][google instructions]]).  
+
+    A properly installed driver will show /dev/cu.SLAB_USBtoUART in the 
+    *Tools->port* menu
 
 *** Windows PC
 

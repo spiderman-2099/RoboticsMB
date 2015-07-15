@@ -37,7 +37,7 @@
   6. Save the program again and commit using github client
   7. Revise the program to use one function instead of two (combine
      shortBlinks() and longBlinks() into one).
-  6. Save, commit, and synchronize to push your code to GitHub
+  8. Save, commit, and synchronize to push your code to GitHub
 
 
 ** Accelerometer Exercise
@@ -73,5 +73,5 @@
      corresponding codes in a table in your engineering notebook.
   3. Program your robot to turn left, right, and go straight using the IR remote 
      control.
-  3. Commit your source code using GitHub and synchronize to push your changes to the server.
+  4. Commit your source code using GitHub and synchronize to push your changes to the server.
 
