@@ -1,0 +1,60 @@
+#+TITLE: Robotics Merit Badge Class Competition:  Robotic Uranium Carry
+#+AUTHOR: Maurice Ling
+#+DATE: 2015-07-20
+* Summary
+  1. Transport radioactive uranium capsule from one reactor to another.
+  2. Uranium capsule will take the form of a ping pong ball
+  3. Begin and end with a human-controlled segment to load and unload
+     the capsule.
+  4. Carefully navigate a maze autonomously
+* Terminology
+  1. We shall refer to the humans participating in the competition as the /participant(s)/
+     and the device as the /robot/.
+  2. The /payload/ refers to the ping pong ball in the competition.
+
+* Competition Specifications
+** Hardware
+   1. The robot may use multiple processors/boards.
+** Programming
+   1. The robot shall not be re-programmed while the robot is in the course.
+   2. The source code for the robots must be available for judges to review
+** Time for Completion
+   1. The robot shall complete the course in maximum of 5 minutes.
+   2. Bonus points shall be awarded for time achieved under 3 minutes.
+** Payload
+   1. The payload shall be a regulation (non-radioactive) ping pong ball with a diameter
+      of 40mm
+   2. The payload shall not be directly touched by the participant.
+** Loading/Unloading
+   1. The robot shall load and unload the payload onto an 3 inch high elevated platform
+   2. Loading and unloading may be done using manual (human-directed or controlled
+      mechanisms).
+** Transport Course
+   1. The transport course will be navigated autonomously by the robot.
+   2. The payload shall remain with the robot during transport
+   3. The participant shall not manually intervene while the robot is within
+      the transport course.
+   4. The robot shall not make contact with walls or objects within the 
+      transport course.
+* Documentation
+  1. Designs must be documented in your Engineering Notebook.
+  2. Include general logic for program
+  3. Include mechanical design diagrams/sketches
+  4. Designs shall be available for review by the judges prior to the competition
+     
+* Teamwork (optional)
+  1. A scout may team up with another scout.  
+  2. Team must be decided by the end of the 2nd class.
+  3. Each member of the team must understand how the robot operates.
+
+* Scoring
+  1. Completion of each segment (Load, transport, Unload) shall be +20 points.
+  2. Bonus Points
+     1) Time Bonus
+        - +10 for under 3 minutes
+        - +20 for under 2 minutes
+        - +30 for under 1 minute
+     2) Up to +20 points for elegant and innovative design
+  3. Point Deductions
+     1) Each manual intervention by the participant during transport (-5)
+     2) Each payload touch by the participant (-5)
