@@ -1,4 +1,4 @@
-#+TITLE: Robotics Merit Badge Class Competition:  Robotic Uranium Carry
+#+TITLE: Robotics Merit Badge Class Competition:  Robotic Plutonium Carry
 #+AUTHOR: Maurice Ling
 #+DATE: 2015-07-20
 * Competition Time, Date and Location
@@ -9,8 +9,8 @@
     - 6:30 pm Judges' Design Reviews
     - 7:00 pm Competition Start.
 * Summary
-  1. Transport radioactive uranium payload from one reactor to another.
-  2. Uranium payload will take the form of a ping pong ball.
+  1. Transport radioactive plutonium payload from one reactor to another.
+  2. Plutonium payload will take the form of a ping pong ball.
   3. Begin and end with a human-controlled segment to load and unload
      the payload.
   4. Autonomously navigate a transport course between the load and unloading areas.
