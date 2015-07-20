@@ -20,12 +20,12 @@ void setup()
 
 void goStraight(int speed)
 {
-  if (speed != 0)
+  if (speed == 0)
   {
-    microM.Motors(speed,speed,0,0);    // update motor controller
+     microM.Motors(0,0,1,1); // put on the brakes!
   } else
   {
-    microM.Motors(0,0,1,1); // put on the brakes!
+     microM.Motors(speed,speed,0,0);    // update motor controller
   }
 }
 
@@ -33,8 +33,11 @@ void loop()
 {
   static int speed=0;
   const int minSpeed=25;
+  const int ZERO_KEY_CODE=10;
+  const int STOP_KEY_CODE=57;
+  
   Serial.println(speed);
-  if (microM.ircommand == 10) // key 0 is to stop
+  if (microM.ircommand == ZERO_KEY_CODE || microM.ircommand == STOP_KEY_CODE) // key 0 is to stop
   {
     speed=0;
   } else if (microM.ircommand > 0 && microM.ircommand < 10)
