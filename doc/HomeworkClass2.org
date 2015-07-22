@@ -13,7 +13,7 @@
   - With GitHub, you can work on different computers as long as you
     commit your work and sync with GitHub.  Just make sure you install
     the necessary tools on the other computer following the instructions
-    in the [[./RoboticsMB_Reference.html][Robotics MB Reference Guide]].
+    in the [[./RoboticsMB_Reference.org][Robotics MB Reference Guide]].
 * Class 2 Exercises
   - Use the Sensor sketch we started in class. Save it under a different name.
   - Normalize the sensor readings so that if there is nothing in front
