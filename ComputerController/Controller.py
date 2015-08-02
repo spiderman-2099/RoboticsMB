@@ -13,15 +13,12 @@ from pykeyboard import PyKeyboard
 ser=serial.Serial('/dev/ttyUSB0',19200,timeout=999)
 key=PyKeyboard()
 
-while (1 == 1):
-    line=ser.readline()
-    tokens=line.split()
-    print(tokens)
-    if (tokens[0] == 'Sense'):
-        intro()
-    elif (tokens[0] == "NoSense"):
-        speak("Goodbye.  Thanks for visiting.")
-    elif (tokens[0] == "Cmd"):
+#
+# Python way of defining functions
+#
+def processCmds(tokens):
+    "This processes commands from the serial port"
+    if (tokens[0] == "Cmd"):
         if (tokens[1] == "Up"):
             key.tap_key(key.up_key);
         elif (tokens[1] == "Down"):
@@ -30,11 +27,20 @@ while (1 == 1):
             key.tap_key(key.left_key)
         elif (tokens[1] == "Right"):
             key.tap_key(key.right_key)
-    elif (tokens[0] == "ScrollDown"):
-        for i in range(0,5):
-            key.tap_key(key.down_key)
+        else:
+            print "unprocessed command:  %s " % tokens[1]
     elif (tokens[0] == "IRCode"):
-        print(tokens[1]);
-
-# clear the serial buffer   
+        # process IR Codes directly
+        print "IR Code: %d" % tokens[1]
+    else:
+        print "Unrecognized input:  %s" % tokens
+        
+while (1 == 1):
+    line=ser.readline()
+    tokens=line.split()
+    print(tokens)
+    if (len(tokens) == 2):
+        processCmds(tokens)
+        
+    # clear the serial buffer   
     ser.flushInput()
