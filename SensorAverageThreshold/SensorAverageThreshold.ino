@@ -18,7 +18,7 @@ const int senseOnOffPin=1;
 int sensorInput[3]={0}; // sensor inputs
 
 int counter=0;
-const int numSamples=20;
+const int numSamples=30;
 
 // collect multiple samples for each sensor
 unsigned int sensorSamples[numSensors][numSamples]={0};
@@ -26,6 +26,8 @@ unsigned int sensorSamples[numSensors][numSamples]={0};
 const int DISTANCE_CLOSE=0;
 const int DISTANCE_MEDIUM=1;
 const int DISTANCE_FAR=2;
+
+unsigned int zeroOffset[numSensors]={320, 320, 320};
 
 void setup()
 {
@@ -60,7 +62,6 @@ void computeSampleAverage(unsigned int *averagedSamples)
 
 void applyThresholds(unsigned int *averageInput, int *normalizedValues)
 {
-  const int zeroOffset[numSensors]={140, 120, 120};
   const int closeThreshold[numSensors]={400,400,400};
   const int farThreshold[numSensors]={100, 99, 70};
   const int mediumThreshold[numSensors]={200,200,200};
@@ -100,23 +101,93 @@ bool valuesChanged(int *values)
   return changed;
 }
 
+/**
+ * Calibrate the zero level.  Point the sensors at nothing
+ * then run this calibration function to set the zero level. 
+ **/
+void calibrateZeroLevel()
+{
+  Serial.print("Calibrating zero level with ");
+  Serial.print(numSamples);
+  Serial.print(" samples");
+  //
+  // collect numSamples first, then compute the average
+  //
+  for (int n=0; n < numSamples; n++)
+  {
+    for (int i = 0; i < numSensors; i++)
+    {
+      sensorSamples[i][n]=analogRead(sensePin[i]);
+    }
+    delay(20); // wait a bit between reads
+
+    Serial.print(".");
+  }
+  Serial.println();
+  // fill in the zero offset with the sample average.
+  computeSampleAverage(zeroOffset);
+  Serial.print("Calibrated zero offsets:  ");
+  for (int i = 0; i < numSensors; i++)
+  {
+    Serial.print(zeroOffset[i]);
+    Serial.print(" ");
+  }  
+  Serial.println();
+}
+
 void loop()
 {
   unsigned int averageInput[numSensors]={0};
   int normalizedValues[numSensors]={0};
+  const int menuButton=28;
+  //
+  // ircommand sometimes produces spurrious values, so
+  // we add a allowCalibrate variable to guard against this.
+  // press topMenu to allow calibration, then press menu to 
+  // calibrate
+  //
+  const int displayButton=85; // Lock calibrate
+  const int topMenuButton=27; // Allow calibrate
+  static bool allowCalibrate=false;
   
-  computeSampleAverage(averageInput);
-
-  applyThresholds(averageInput, normalizedValues);
-
-  if (valuesChanged(normalizedValues))
+  if (microM.ircommand > 0)
   {
-    for (int i = 0; i < numSensors; i++)
+    switch (microM.ircommand)
     {
-      Serial.print(normalizedValues[i]);
-      Serial.print(" ");
+      case topMenuButton:
+        allowCalibrate = true;
+        Serial.println("Allow Calibrate");
+        break;
+      case displayButton:
+        allowCalibrate=false;
+        Serial.println("Calibration Locked");
+        break;
+      case menuButton:
+        if (allowCalibrate)
+        {
+          calibrateZeroLevel();
+          microM.ircommand = 0;
+          allowCalibrate=false;
+        }
+        break;
     }
-    Serial.println();
+    microM.ircommand=0;
+  } else
+  {
+    computeSampleAverage(averageInput);
+
+    applyThresholds(averageInput, normalizedValues);
+
+    if (valuesChanged(normalizedValues))
+    {
+      for (int i = 0; i < numSensors; i++)
+      {
+        Serial.print(normalizedValues[i]);
+        Serial.print(" ");
+      }
+      Serial.println();
+      allowCalibrate=false;
+    }
   } 
 }
 
