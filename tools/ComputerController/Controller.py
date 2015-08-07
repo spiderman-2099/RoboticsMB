@@ -12,12 +12,14 @@ import sys, getopt
 
 from pymouse import PyMouse
 from pykeyboard import PyKeyboard
+key=PyKeyboard()
 
 serialPort='/dev/ttyUSB0'
 #
 # Python way of defining functions
 #
 def processCmds(tokens):
+    global key;
     "This processes commands from the serial port"
     if (tokens[0] == "Cmd"):
         if (tokens[1] == "Up"):
@@ -32,7 +34,7 @@ def processCmds(tokens):
             print "unprocessed command:  %s " % tokens[1]
     elif (tokens[0] == "IRCode"):
         # process IR Codes directly
-        print "IR Code: %d" % tokens[1]
+        print "IR Code: %s" % tokens[1]
     else:
         print "Unrecognized input:  %s" % tokens
 
@@ -62,7 +64,6 @@ def main(argv):
 
     try:
         ser=serial.Serial('/dev/ttyUSB0',19200,timeout=999)
-        key=PyKeyboard()
         while (1 == 1):
             line=ser.readline()
             tokens=line.split()

@@ -1,4 +1,4 @@
-#+TITLE: Class 1 Homework
+#+TITLE: Class 2 Homework
 #+AUTHOR: Maurice Ling
 #+DATE: 2015-07-20
 * Homework comments

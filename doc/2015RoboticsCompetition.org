@@ -24,6 +24,9 @@
   5. The participant's /entry/ into the competition includes the hardware, software (program), 
      and documentation (Engineering Notebook)
 
+* Robot Dimensions
+  - Robot must be able to fit in the plastic box distributed at the first class.
+    (8.25"x6.0"x6.5")
 * Competition Specifications
 ** Hardware
    1. The robot shall be programmable by the participant(s).
