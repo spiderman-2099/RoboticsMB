@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Example python program to run on the computer to process commands from
 # the Serial Port.  Use in conjunction with the ComputerController Sketch
@@ -31,23 +31,23 @@ def processCmds(tokens):
         elif (tokens[1] == "Right"):
             key.tap_key(key.right_key)
         else:
-            print "unprocessed command:  %s " % tokens[1]
+            print("unprocessed command:  ", tokens[1])
     elif (tokens[0] == "IRCode"):
         # process IR Codes directly
-        print "IR Code: %s" % tokens[1]
+        print("IR Code: ",tokens[1])
     else:
-        print "Unrecognized input:  %s" % tokens
+        print("Unrecognized input: ", tokens)
 
 
 def usage():
     global serialPort
-    print 'Controller.py -s {serial port}'
-    print
-    print 'Receive commands via the serial port'
-    print
-    print 'Options:'
-    print '   -s {serial port} (default %s)' % serialPort
-    print
+    print('Controller.py -s {serial port}')
+    print()
+    print('Receive commands via the serial port')
+    print()
+    print('Options:')
+    print("   -s {serial port} (default ", serialPort, ")")
+    print()
     sys.exit(2)
     
 def main(argv):
@@ -74,7 +74,7 @@ def main(argv):
                 # clear the serial buffer   
                 ser.flushInput()
     except (OSError, serial.SerialException):
-        print "Error opening serial port %s" % serialPort
+        print("Error opening serial port ", serialPort)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
