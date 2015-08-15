@@ -29,7 +29,7 @@
 ** Hardware
    1. The robot shall be programmed by the participants.
    2. The robot shall use one or more processors/boards
-   3. Robot must be able to fit in the plastic box distributed at the first class.
+   3. Robot shall fit in the plastic box distributed at the first class.
       (8.25"x6.0"x6.5")
 ** Programming
    1. The robot shall not be re-programmed while the robot is in the competition course.
