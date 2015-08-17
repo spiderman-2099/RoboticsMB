@@ -54,7 +54,7 @@ void printOrientationValues()
       // adjust the measured value so that zero is really zero
       if (i != 0)
       {
-        Serial.print(", ");
+        Serial.print(" ");
       } 
       Serial.print(lastValue[i]); // print raw accelerometer value
     }    

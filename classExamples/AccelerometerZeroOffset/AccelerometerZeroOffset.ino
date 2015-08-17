@@ -56,10 +56,7 @@ void printOrientationValues()
       {
         Serial.print(" ");
       }
-      if (i == 0)
-      { 
-        Serial.print(lastValue[i]-zeroOffset[i]); // print raw accelerometer value
-      }
+      Serial.print(lastValue[i]-zeroOffset[i]); // print raw accelerometer value
     }    
     Serial.println();
   } 
