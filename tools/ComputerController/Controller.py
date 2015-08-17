@@ -63,7 +63,7 @@ def main(argv):
             serialPort=arg
 
     try:
-        ser=serial.Serial('/dev/ttyUSB0',19200,timeout=999)
+        ser=serial.Serial(serialPort,19200,timeout=999)
         while (1 == 1):
             line=ser.readline()
             tokens=line.split()
