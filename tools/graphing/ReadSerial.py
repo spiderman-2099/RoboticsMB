@@ -51,7 +51,7 @@ def main(argv):
             serialPort=arg
 
     try:
-        ser=serial.Serial('/dev/ttyUSB0',9600,timeout=999)
+        ser=serial.Serial(serialPort,9600,timeout=999)
 
         while (1 == 1):
             try:
