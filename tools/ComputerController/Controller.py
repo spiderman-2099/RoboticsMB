@@ -21,18 +21,18 @@ serialPort='/dev/ttyUSB0'
 def processCmds(tokens):
     global key;
     "This processes commands from the serial port"
-    if (tokens[0] == "Cmd"):
-        if (tokens[1] == "Up"):
+    if (tokens[0] == b"Cmd"):
+        if (tokens[1] == b"Up"):
             key.tap_key(key.up_key);
-        elif (tokens[1] == "Down"):
+        elif (tokens[1] == b"Down"):
             key.tap_key(key.down_key);
-        elif (tokens[1] == "Left"):
+        elif (tokens[1] == b"Left"):
             key.tap_key(key.left_key)
-        elif (tokens[1] == "Right"):
+        elif (tokens[1] == b"Right"):
             key.tap_key(key.right_key)
         else:
             print("unprocessed command:  ", tokens[1])
-    elif (tokens[0] == "IRCode"):
+    elif (tokens[0] == b"IRCode"):
         # process IR Codes directly
         print("IR Code: ",tokens[1])
     else:
