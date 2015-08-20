@@ -1,0 +1,10 @@
+#+TITLE: Class 4 Homework
+#+AUTHOR: Maurice Ling
+#+DATE: 2015-08-17
+* Continue testing and programming your robot for the competition.
+  - Your robot must perform functionality similar to the test plan described
+    in class.
+* Come up with a name for your robot.
+* Create a sign with your name and your robot's name for the quarantine table.
+* Finish filling out Robotics Merit Badge Workbook
+* Get your Blue Card signed
