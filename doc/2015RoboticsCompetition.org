@@ -68,6 +68,19 @@
    3. Circuit diagram
    4. Testing results
       
+** Quarantine
+   1. The participant shall design a sign identifying his name and his robot's name
+      for the quarantine table
+   2. All robots and IR controllers will be quarantined 5 minutes before the 
+      competition start up until the time the robot is to compete.
+   3. All robots and IR controllers will be placed on a quarantine table until
+      each participant's competition.
+   4. No programming or robot modifications shall be made during the competition.
+   5. There will be a one minute period prior to starting competition for
+      the active competion participant to adjust and calibrate the robot.
+   6. After each competition, the participant's robot must be returned to
+      the quarantine table.
+   
 * Teamwork (optional)
   1. A scout may team up with one other scout. 
   2. Team must be decided by the end of the 2nd class.
